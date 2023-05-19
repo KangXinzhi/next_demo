@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #000 !important;
+  margin: 0;
+  padding: 0;
+}
+
+.ant-steps-item-title{
+  color: #fff !important;
+}
+
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon >.ant-steps-icon{
+  color: #ddd !important;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-steps .ant-steps-item-wait .ant-steps-item-icon{
+  background-color: #153a7f;
+}
+
+.ant-spin-text{
+  color: #fff !important;
+  font-size: 20px !important;
+}
+
+.ant-spin-dot-item{
+  background-color: #fff !important;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.83em;
+  margin-top: 0.83em;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.33em;
+  margin-top: 1.33em;
+}
+
+h5 {
+  display: block;
+  font-size: 0.83em;
+  font-weight: bold;
+  margin-bottom: 1.67em;
+  margin-top: 1.67em;
+}
+
+h6 {
+  display: block;
+  font-size: 0.67em;
+  font-weight: bold;
+  margin-bottom: 2.33em;
+  margin-top: 2.33em;
+}
