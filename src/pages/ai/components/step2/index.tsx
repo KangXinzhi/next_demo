@@ -1,10 +1,10 @@
-import { Input } from 'antd'
+import Input from 'antd/lib/input'
 import { useContent } from '../contentProvider'
 import styles from './index.module.css'
 
 const { TextArea } = Input
 
-function TextInput() {
+function Step2() {
   const { msg, setMsg, handleSend, currentQuestion } = useContent()
 
   return (
@@ -49,4 +49,4 @@ function TextInput() {
   )
 }
 
-export default TextInput
+export default Step2

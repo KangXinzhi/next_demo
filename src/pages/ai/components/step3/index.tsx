@@ -1,11 +1,13 @@
 import React from 'react'
 
-import TextArea from 'antd/es/input/TextArea'
+import Input from 'antd/lib/input'
 import { Table } from 'antd'
 import { useContent } from '../contentProvider'
 import RadarChart from '../radarChart'
 import styles from './index.module.css'
 import './customTable.css'
+
+const { TextArea } = Input
 
 function Step() {
   const { msg, setMsg, currentQuestion, outputMessage } = useContent()
@@ -109,19 +111,19 @@ function Step() {
         />
       </div>
       {outputMessage && outputMessage.score && outputMessage.evidence && outputMessage.suggest && (
-      <div>
         <div>
-          <h2>最终得分：{Math.floor(0.3 * (((+outputMessage.score['论点清晰度']) * 0.3) + ((+outputMessage.score['支持材料']) * 0.3) + ((+outputMessage.score['语法和词汇']) * 0.2) + ((+outputMessage.score['思维逻辑']) * 0.1) + ((+outputMessage.score['组织结构']) * 0.1)))}分</h2>
-          <h3>(打分标准:  满分30 * (论点清晰度得分*30% + 支持材料*30% + 语法和词汇*20% + 思维逻辑*10% + 思维逻辑*10%))</h3>
-          <RadarChart score={outputMessage.score}/>
+          <div>
+            <h2>最终得分：{Math.floor(0.3 * (((+outputMessage.score['论点清晰度']) * 0.3) + ((+outputMessage.score['支持材料']) * 0.3) + ((+outputMessage.score['语法和词汇']) * 0.2) + ((+outputMessage.score['思维逻辑']) * 0.1) + ((+outputMessage.score['组织结构']) * 0.1)))}分</h2>
+            <h3>(打分标准:  满分30 * (论点清晰度得分*30% + 支持材料*30% + 语法和词汇*20% + 思维逻辑*10% + 思维逻辑*10%))</h3>
+            <RadarChart score={outputMessage.score} />
+          </div>
+          <div>
+            <h2>判断依据：</h2>{outputMessage.evidence}
+          </div>
+          <div>
+            <h2>意见建议：</h2>{outputMessage.suggest}
+          </div>
         </div>
-        <div>
-          <h2>判断依据：</h2>{outputMessage.evidence}
-        </div>
-        <div>
-          <h2>意见建议：</h2>{outputMessage.suggest}
-        </div>
-      </div>
       )}
     </div>
   )

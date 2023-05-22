@@ -1,15 +1,13 @@
 import React from 'react'
 
-import { ContentProvider } from './components/ContentProvider'
-import Content from './components/Content'
+import { ContentProvider } from './components/contentProvider'
+import Content from './components/content'
 
 function AI() {
-  console.log(1)
   return (
     <ContentProvider>
       <Content/>
     </ContentProvider>
-
   )
 }
 export default AI
